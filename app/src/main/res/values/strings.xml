@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">LearnCountriesAndFlagsGame</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_page_title">CHOOSE ONE OR MORE REGIONS TO PLAY</string>
+    <string name="europe">EUROPE</string>
+    <string name="africa">AFRICA</string>
+    <string name="south_america">AMERICAS</string>
+    <string name="central_and_north_america">CENTRAL AND NORTH AMERICA</string>
+    <string name="asia">ASIA</string>
+    <string name="oceania">OCEANIA</string>
+    <string name="play">PLAY</string>
+    <string name="capitals">CAPITALS</string>
+    <string name="flags">FLAGS</string>
+    <string name="play_3_lives">PLAY 3 LIVES</string>
+    <string name="sudden_death">SUDDEN DEATH</string>
+    <string name="practice">PRACTICE</string>
+    <string name="play_capitals_title">WHAT IS THE CAPITAL OF</string>
+    <string name="play_flags_title">TO WHAT COUNTRY THIS FLAG BELONGS TO</string>
+    <string name="game_over">GAME OVER!</string>
+    <string name="enter_your_name">ENTER YOUR NAME</string>
+    <string name="enter">ENTER</string>
+    <string name="submit">SUBMIT</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_rank_based_on_this_game">YOUR RANK BASED ON THIS GAME</string>
+    <string name="top_5">TOP 5</string>
+    <string name="restart">RESTART</string>
+    <string name="home">HOME</string>
+</resources>

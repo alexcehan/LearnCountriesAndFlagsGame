@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/chooseRegionScreenFragment">
+
+    <fragment
+        android:id="@+id/chooseRegionScreenFragment"
+        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.ChooseRegionScreenFragment"
+        android:label="fragment_choose_region_screen"
+        tools:layout="@layout/fragment_choose_region_screen" >
+        <action
+            android:id="@+id/action_chooseRegionScreenFragment_to_chooseCapitalsOrFlagsScreenFragment"
+            app:destination="@id/chooseCapitalsOrFlagsScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseCapitalsOrFlagsScreenFragment"
+        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.ChooseCapitalsOrFlagsScreenFragment"
+        android:label="fragment_choose_capitals_or_flags_screen"
+        tools:layout="@layout/fragment_choose_capitals_or_flags_screen" >
+        <action
+            android:id="@+id/action_chooseCapitalsOrFlagsScreenFragment_to_chooseTypeOfGameScreenFragment"
+            app:destination="@id/chooseTypeOfGameScreenFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/chooseTypeOfGameScreenFragment"
+        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.ChooseTypeOfGameScreenFragment"
+        android:label="fragment_choose_type_of_game_screen"
+        tools:layout="@layout/fragment_choose_type_of_game_screen" >
+        <action
+            android:id="@+id/action_chooseTypeOfGameScreenFragment_to_playCapitalsFragment"
+            app:destination="@id/playCapitalsFragment" />
+        <action
+            android:id="@+id/action_chooseTypeOfGameScreenFragment_to_playFlagsFragment"
+            app:destination="@id/playFlagsFragment" />
+
+        <argument
+            android:name="nameOfTheGame"
+            app:argType="string"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/playCapitalsFragment"
+        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.PlayCapitalsFragment"
+        android:label="fragment_play_capitals"
+        tools:layout="@layout/fragment_play_capitals" >
+        <action
+            android:id="@+id/action_playCapitalsFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+
+        <argument
+            android:name="typeOfTheGame"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/playFlagsFragment"
+        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.PlayFlagsFragment"
+        android:label="fragment_play_flags"
+        tools:layout="@layout/fragment_play_flags" >
+        <action
+            android:id="@+id/action_playFlagsFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+
+        <argument
+            android:name="typeOfTheGame"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.GameOverFragment"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/action_gameOverFragment_to_ranksFragment"
+            app:destination="@id/ranksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ranksFragment"
+        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.RanksFragment"
+        android:label="fragment_ranks"
+        tools:layout="@layout/fragment_ranks" >
+        <action
+            android:id="@+id/action_ranksFragment_to_chooseRegionScreenFragment"
+            app:destination="@id/chooseRegionScreenFragment" />
+        <action
+            android:id="@+id/action_ranksFragment_to_playCapitalsFragment"
+            app:destination="@id/playCapitalsFragment" />
+        <action
+            android:id="@+id/action_ranksFragment_to_playFlagsFragment"
+            app:destination="@id/playFlagsFragment" />
+    </fragment>
+</navigation>

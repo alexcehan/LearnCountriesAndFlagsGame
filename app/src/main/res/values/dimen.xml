@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_text_size">32sp</dimen>
+    <dimen name="big_titles_size">54sp</dimen>
+    <dimen name="text_size_for_buttons">26sp</dimen>
+    <dimen name="corner_radius_for_buttons">8dp</dimen>
+    <dimen name="buttons_width">261dp</dimen>
+    <dimen name="buttons_height">49dp</dimen>
+    <dimen name="buttons_padding">8dp</dimen>
+    <dimen name="final_screen_button_width">131dp</dimen>
+    <dimen name="top_margin_for_items_in_choose_region_screen">35dp</dimen>
+    <dimen name="vertical_margins_screen_borders">40dp</dimen>
+    <dimen name="vertical_margins_for_play_fragments_borders">80dp</dimen>
+    <dimen name="vertical_margins_for_seconds_screens">80dp</dimen>
+</resources>

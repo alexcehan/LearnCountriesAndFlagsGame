@@ -6,9 +6,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "one_life_stats_flags")
 data class OneLifeStatsFlags(
     @PrimaryKey(autoGenerate = true)
-    var id: Long = 0L,
+    override var id: Long = 0L,
 
-    var user: String,
+    override var user: String,
 
-    var score: Int
-)
+    override var score: Int
+): RankItem(id, user, score)

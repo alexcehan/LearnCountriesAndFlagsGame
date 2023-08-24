@@ -16,26 +16,28 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="@dimen/screen_padding"
         android:background="@color/background_color"
         >
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/buttons_height"
             android:id="@+id/chose_region_hard_text"
             android:text="@string/first_page_title"
             android:autoSizeTextType="uniform"
-            android:maxLines="1"
+            android:maxLines="2"
             android:padding="@dimen/buttons_padding"
             android:textSize="@dimen/title_text_size"
             android:gravity="center"
-            android:layout_marginTop="@dimen/vertical_margins_screen_borders"
+
             android:textStyle="normal"
             android:fontFamily="@font/jim_nightshade_regular"
             android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="@dimen/buttons_width"
@@ -53,7 +55,9 @@
             app:cornerRadius="@dimen/corner_radius_for_buttons"
             app:layout_constraintTop_toBottomOf="@id/chose_region_hard_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="@dimen/buttons_width"
@@ -71,7 +75,9 @@
             app:cornerRadius="@dimen/corner_radius_for_buttons"
             app:layout_constraintTop_toBottomOf="@id/choose_europe_region_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="@dimen/buttons_width"
@@ -89,7 +95,9 @@
             app:cornerRadius="@dimen/corner_radius_for_buttons"
             app:layout_constraintTop_toBottomOf="@id/choose_africa_region_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
 
 
@@ -109,7 +117,9 @@
             app:cornerRadius="@dimen/corner_radius_for_buttons"
             app:layout_constraintTop_toBottomOf="@id/choose_americas_region_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="@dimen/buttons_width"
@@ -127,29 +137,33 @@
             app:cornerRadius="@dimen/corner_radius_for_buttons"
             app:layout_constraintTop_toBottomOf="@id/choose_asia_region_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/play_button"
-            android:clickable="@{viewModel.isPlayButtonClickable()}"
-            android:text="@string/play"
-            android:padding="@dimen/buttons_padding"
+            android:layout_width="@dimen/buttons_width"
+            android:layout_height="@dimen/buttons_height"
+            android:layout_marginTop="@dimen/top_margin_for_items_in_choose_region_screen"
+
             android:autoSizeTextType="uniform"
             android:background="@drawable/rounded_button_unclickeble"
-            android:textSize="@dimen/text_size_for_buttons"
-            android:gravity="center"
-            android:layout_marginTop="@dimen/top_margin_for_items_in_choose_region_screen"
-            android:layout_marginBottom="@dimen/vertical_margins_screen_borders"
-            android:fontFamily="@font/jim_nightshade_regular"
-            android:textColor="@color/black"
-            app:cornerRadius="@dimen/corner_radius_for_buttons"
+            android:clickable="@{viewModel.isPlayButtonClickable()}"
             android:elevation="0dp"
-            app:layout_constraintTop_toBottomOf="@id/choose_oceania_region_button"
-            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/jim_nightshade_regular"
+            android:gravity="center"
+            android:padding="@dimen/buttons_padding"
+            android:text="@string/play"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_for_buttons"
+            app:cornerRadius="@dimen/corner_radius_for_buttons"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_oceania_region_button"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value_play"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
 
 

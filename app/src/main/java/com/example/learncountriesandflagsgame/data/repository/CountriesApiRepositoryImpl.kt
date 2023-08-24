@@ -17,6 +17,9 @@ class CountriesApiRepositoryImpl @Inject constructor(private val api: RestCountr
                 val data = response.body()
 
                 emit(data!!)
+
+            } else  {
+                throw Exception("There was a problem with your request! Error code: ${response.code()}")
             }
         }
     }

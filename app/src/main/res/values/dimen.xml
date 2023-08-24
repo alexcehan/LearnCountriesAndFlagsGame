@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="screen_padding">30dp</dimen>
     <dimen name="title_text_size">32sp</dimen>
     <dimen name="big_titles_size">54sp</dimen>
     <dimen name="text_size_for_buttons">26sp</dimen>
     <dimen name="corner_radius_for_buttons">8dp</dimen>
-    <dimen name="buttons_width">261dp</dimen>
-    <dimen name="buttons_height">49dp</dimen>
+    <dimen name="buttons_width">0dp</dimen>
+    <dimen name="buttons_height">0dp</dimen>
     <dimen name="buttons_padding">8dp</dimen>
     <dimen name="final_screen_button_width">131dp</dimen>
     <dimen name="top_margin_for_items_in_choose_region_screen">35dp</dimen>
     <dimen name="vertical_margins_screen_borders">40dp</dimen>
-    <dimen name="vertical_margins_for_play_fragments_borders">80dp</dimen>
-    <dimen name="vertical_margins_for_seconds_screens">80dp</dimen>
+    <dimen name="vertical_margins_for_play_fragments_borders">50dp</dimen>
+    <dimen name="vertical_margins_for_seconds_screens">50dp</dimen>
+    <dimen name="margins_for_group_of_hearts">12dp</dimen>
+    <dimen name="margin_for_each_heart">4dp</dimen>
+    <dimen name="heart_dimension">20dp</dimen>
+    <dimen name="score_text_size">20sp</dimen>
+    <dimen name="rank_item_font_size">24sp</dimen>
+    <dimen name="padding_for_rank_item">6dp</dimen>
+    <dimen name="top_margin_rank_items">9dp</dimen>
+    <dimen name="constraint_width_value">0.65</dimen>
+    <dimen name="constraint_height_value">0.07</dimen>
+    <dimen name="constraint_width_value_play">0.40</dimen>
+    <dimen name="flag_width_percent">0.70</dimen>
+    <dimen name="flag_height_percent">0.20</dimen>
+
+
 </resources>

@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="rankItem"
+            type="com.example.learncountriesandflagsgame.data.entities.RankItem" />
+    </data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jim_nightshade_regular"
+                android:textSize="@dimen/rank_item_font_size"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/top_margin_rank_items"
+                android:padding="@dimen/padding_for_rank_item"
+                android:textColor="@color/black"
+                android:text="1."
+                android:id="@+id/rank_position"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rank_player_name"
+                android:fontFamily="@font/jim_nightshade_regular"
+                android:textSize="@dimen/rank_item_font_size"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/top_margin_rank_items"
+                android:padding="@dimen/padding_for_rank_item"
+                android:textColor="@color/black"
+                android:text="@{rankItem.user}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rank_player_score"
+                android:fontFamily="@font/jim_nightshade_regular"
+                android:textSize="@dimen/rank_item_font_size"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/top_margin_rank_items"
+                android:padding="@dimen/padding_for_rank_item"
+                android:textColor="@color/black"
+                android:text="@{String.valueOf(rankItem.score)}"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

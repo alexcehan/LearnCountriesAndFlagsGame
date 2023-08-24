@@ -16,6 +16,8 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="@dimen/screen_padding"
+
         android:background="@color/background_color"
         >
 
@@ -37,7 +39,9 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/choose_flags_game_butoon"/>
+            app:layout_constraintBottom_toTopOf="@id/choose_flags_game_butoon"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="@dimen/buttons_width"
@@ -56,7 +60,9 @@
             app:layout_constraintTop_toBottomOf="@id/choose_capitals_game_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

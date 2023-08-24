@@ -14,15 +14,77 @@
         
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="@dimen/screen_padding"
         android:background="@color/background_color"
         >
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margins_for_group_of_hearts"
+            android:id="@+id/group_of_hearts"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/heart_dimension"
+                android:layout_height="@dimen/heart_dimension"
+                android:id="@+id/first_life_heart"
+                android:layout_margin="@dimen/margin_for_each_heart"/>
+
+            <ImageView
+                android:layout_width="@dimen/heart_dimension"
+                android:layout_height="@dimen/heart_dimension"
+                android:id="@+id/second_life_heart"
+                android:layout_margin="@dimen/margin_for_each_heart"/>
+
+            <ImageView
+                android:layout_width="@dimen/heart_dimension"
+                android:layout_height="@dimen/heart_dimension"
+                android:id="@+id/third_life_heart"
+                android:layout_margin="@dimen/margin_for_each_heart"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group_of_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margins_for_group_of_hearts"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/play_bold"
+                android:textSize="@dimen/score_text_size"
+                android:layout_margin="@dimen/margin_for_each_heart"
+                android:text="@string/score"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/play_bold"
+                android:textSize="@dimen/score_text_size"
+                android:id="@+id/current_game_score"
+                android:layout_margin="@dimen/margin_for_each_heart"
+                android:text="@{viewModel.scoreOfCurrentGame.toString()}"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/buttons_height"
             android:id="@+id/play_capitals_title_id"
             android:text="@string/play_capitals_title"
-            android:maxLines="1"
+            android:maxLines="2"
             android:autoSizeTextType="uniform"
             android:padding="@dimen/buttons_padding"
             android:textSize="@dimen/title_text_size"
@@ -33,11 +95,12 @@
             android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"/>
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/buttons_height"
             android:id="@+id/name_of_country_to_be_played"
             android:text="@{viewModel.currentCountryToBePlayed.countryName}"
 
@@ -51,7 +114,8 @@
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/play_capitals_title_id"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="@dimen/buttons_width"
@@ -71,7 +135,9 @@
             app:cornerRadius="@dimen/corner_radius_for_buttons"
             app:layout_constraintTop_toBottomOf="@id/name_of_country_to_be_played"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="@dimen/buttons_width"
@@ -91,7 +157,9 @@
             app:cornerRadius="@dimen/corner_radius_for_buttons"
             app:layout_constraintTop_toBottomOf="@id/first_answer_capitals"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="@dimen/buttons_width"
@@ -110,7 +178,9 @@
             app:cornerRadius="@dimen/corner_radius_for_buttons"
             app:layout_constraintTop_toBottomOf="@id/second_answer_capitals"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="@dimen/buttons_width"
@@ -130,7 +200,9 @@
             app:cornerRadius="@dimen/corner_radius_for_buttons"
             app:layout_constraintTop_toBottomOf="@id/third_answer_capitals"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent= "@dimen/constraint_width_value"
+            app:layout_constraintHeight_percent="@dimen/constraint_height_value"/>
 
 
 

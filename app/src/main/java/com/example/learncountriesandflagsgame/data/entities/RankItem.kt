@@ -1,4 +1,6 @@
 package com.example.learncountriesandflagsgame.data.entities
 
-class RankItemParent {
+open class RankItem (open val id: Long,
+                     open val user: String,
+                     open val score: Int){
 }

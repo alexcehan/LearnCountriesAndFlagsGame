@@ -1,14 +1,17 @@
 package com.example.learncountriesandflagsgame.data.entities
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "countries")
+@Entity(tableName = "countries", indices = [Index(value = ["countryName"], unique = true)])
 data class Countries(
 
     @PrimaryKey(autoGenerate = true)
     var countryId: Long = 0L,
 
+    @ColumnInfo(name = "countryName")
     var countryName: String,
 
     var capitalName: String,

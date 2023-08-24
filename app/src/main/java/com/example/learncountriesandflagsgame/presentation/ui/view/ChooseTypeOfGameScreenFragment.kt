@@ -1,22 +1,35 @@
 package com.example.learncountriesandflagsgame.presentation.ui.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
-import com.example.learncountriesandflagsgame.R
 import com.example.learncountriesandflagsgame.databinding.FragmentChooseTypeOfGameScreenBinding
-import com.example.learncountriesandflagsgame.presentation.ui.viewmodels.GameViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
-class ChooseTypeOfGameScreenFragment : Fragment() {
+class ChooseTypeOfGameScreenFragment  : Fragment() {
     private var _binding: FragmentChooseTypeOfGameScreenBinding? = null
     private val binding get() = _binding!!
+
+    @Inject
+    lateinit var typeOfGame: LiveData<String>
+
+    @Inject
+    lateinit var setTypeOfGame: MutableLiveData<String>
+
+
+    @Inject
+    lateinit var nameOfGame: LiveData<Boolean>
+
+
+
+
 
 
 
@@ -30,53 +43,48 @@ class ChooseTypeOfGameScreenFragment : Fragment() {
         val view = binding.root
         binding.lifecycleOwner = viewLifecycleOwner
 
-        val gameName = ChooseTypeOfGameScreenFragmentArgs.fromBundle(requireArguments()).nameOfTheGame
-        val stringOfRegions = ""
+
+
+
 
 
         binding.choosePracticeButoon.setOnClickListener {
-            val typeOfTheGame = "Practice"
-            if(gameName.equals("Capitals")) {
-                val action = ChooseTypeOfGameScreenFragmentDirections.actionChooseTypeOfGameScreenFragmentToPlayCapitalsFragment(typeOfTheGame)
-                this.findNavController().navigate(action)
-            } else if(gameName.equals("Flags")) {
-                val action = ChooseTypeOfGameScreenFragmentDirections.actionChooseTypeOfGameScreenFragmentToPlayFlagsFragment(typeOfTheGame)
-                this.findNavController().navigate(action)
-
-            }
+            setTypeOfTheGameFunc("Practice")
+            navigateToNextScreen()
 
 
 
         }
         binding.choosePlay3LivesButton.setOnClickListener {
-            val typeOfTheGame = "Play3Lives"
-            if(gameName.equals("Capitals")) {
-                val action = ChooseTypeOfGameScreenFragmentDirections.actionChooseTypeOfGameScreenFragmentToPlayCapitalsFragment(typeOfTheGame)
-                this.findNavController().navigate(action)
-            } else if(gameName.equals("Flags")) {
-                val action = ChooseTypeOfGameScreenFragmentDirections.actionChooseTypeOfGameScreenFragmentToPlayFlagsFragment(typeOfTheGame)
-                this.findNavController().navigate(action)
-
-            }
+            setTypeOfTheGameFunc("Play3Lives")
+            navigateToNextScreen()
 
 
 
         }
         binding.chooseSuddenDeathButoon.setOnClickListener {
-            val typeOfTheGame = "SuddenDeath"
-            if(gameName.equals("Capitals")) {
-                val action = ChooseTypeOfGameScreenFragmentDirections.actionChooseTypeOfGameScreenFragmentToPlayCapitalsFragment(typeOfTheGame)
-                this.findNavController().navigate(action)
-            } else if(gameName.equals("Flags")) {
-                val action = ChooseTypeOfGameScreenFragmentDirections.actionChooseTypeOfGameScreenFragmentToPlayFlagsFragment(typeOfTheGame)
-                this.findNavController().navigate(action)
-
-            }
+            setTypeOfTheGameFunc("SuddenDeath")
+            navigateToNextScreen()
         }
 
 
 
         return view
+    }
+
+    fun setTypeOfTheGameFunc(typeOfGame: String) {
+        setTypeOfGame.value = typeOfGame
+    }
+
+    fun navigateToNextScreen() {
+        if(nameOfGame.value!!) {
+            val action = ChooseTypeOfGameScreenFragmentDirections.actionChooseTypeOfGameScreenFragmentToPlayCapitalsFragment()
+            this.findNavController().navigate(action)
+        } else if(!nameOfGame.value!!) {
+            val action = ChooseTypeOfGameScreenFragmentDirections.actionChooseTypeOfGameScreenFragmentToPlayFlagsFragment()
+            this.findNavController().navigate(action)
+
+        }
     }
 
     override fun onDestroy() {

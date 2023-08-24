@@ -19,23 +19,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object ApiModule {
 
-
-    private val regionsString: MutableLiveData<List<String>> = MutableLiveData(emptyList())
-
-    @Singleton
-    @Provides
-    fun provideStringOfRegions(): LiveData<List<String>> {
-        return regionsString
-    }
-
-    @Singleton
-    @Provides
-    fun provideStringOfRegionsSetter(): MutableLiveData<List<String>> {
-        return regionsString
-    }
-
-
-
     @Provides
     @Singleton
     fun provideMyApi(): RestCountriesApi {

@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey
 data class OneLifeStatsCapital(
 
     @PrimaryKey(autoGenerate = true)
-    var id: Long,
+    override var id: Long,
 
-    var user: String,
+    override var user: String,
 
-    var score: Int
-)
+    override var score: Int
+): RankItem(id, user, score)

@@ -9,7 +9,7 @@ class ApiReturnedCountryToRoomCountryMapper {
         return Countries(
             0,
             apiJsonResultItem.name.common,
-            apiJsonResultItem.capital.get(0),
+            apiJsonResultItem.capital[0],
             apiJsonResultItem.region,
             apiJsonResultItem.flags.png
         )

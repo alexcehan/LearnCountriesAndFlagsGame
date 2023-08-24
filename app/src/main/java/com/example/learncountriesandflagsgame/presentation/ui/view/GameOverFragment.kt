@@ -1,14 +1,26 @@
 package com.example.learncountriesandflagsgame.presentation.ui.view
 
+import android.app.usage.UsageEvents.Event
 import android.os.Bundle
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.learncountriesandflagsgame.R
+import android.view.inputmethod.EditorInfo
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.learncountriesandflagsgame.databinding.FragmentGameOverBinding
+import com.example.learncountriesandflagsgame.presentation.ui.viewmodels.GameOverCapitalsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class GameOverFragment : Fragment() {
+    private var _binding: FragmentGameOverBinding? = null
+    private val binding get() = _binding!!
+    private val viewModel: GameOverCapitalsViewModel by viewModels()
+
 
 
 
@@ -17,7 +29,33 @@ class GameOverFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_game_over, container, false)
+        _binding = FragmentGameOverBinding.inflate(inflater, container, false)
+        val view = binding.root
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.viewModel = viewModel
+
+        viewModel.currentGameScore.value =
+            GameOverFragmentArgs.fromBundle(requireArguments()).score.toIntOrNull() ?: 0
+
+        binding.submitScoreButton.setOnClickListener {
+            viewModel.saveScoreToLocalDataBase()
+            val action = GameOverFragmentDirections.actionGameOverFragmentToRanksFragment("${viewModel.currentGameScore.value}")
+            findNavController().navigate(action)
+        }
+
+        binding.enterNameEditText.setOnEditorActionListener { _, actionId, _ ->
+            if ( actionId == EditorInfo.IME_ACTION_SEND ) {
+                viewModel.saveScoreToLocalDataBase()
+                val action = GameOverFragmentDirections.actionGameOverFragmentToRanksFragment("${viewModel.currentGameScore.value}")
+                findNavController().navigate(action)
+                true
+            } else {
+                false
+            }
+        }
+
+
+        return view
     }
 
 

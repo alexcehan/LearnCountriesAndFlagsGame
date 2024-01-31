@@ -8,7 +8,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.learncountriesandflagsgame.presentation.ui.viewmodels.GameViewModel" />
+            type="com.alexsapps.learncountriesandflagsgame.presentation.ui.viewmodels.GameViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

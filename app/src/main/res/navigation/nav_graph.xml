@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/chooseRegionScreenFragment"
-        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.ChooseRegionScreenFragment"
+        android:name="com.alexsapps.learncountriesandflagsgame.presentation.ui.view.ChooseRegionScreenFragment"
         android:label="fragment_choose_region_screen"
         tools:layout="@layout/fragment_choose_region_screen" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/chooseCapitalsOrFlagsScreenFragment"
-        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.ChooseCapitalsOrFlagsScreenFragment"
+        android:name="com.alexsapps.learncountriesandflagsgame.presentation.ui.view.ChooseCapitalsOrFlagsScreenFragment"
         android:label="fragment_choose_capitals_or_flags_screen"
         tools:layout="@layout/fragment_choose_capitals_or_flags_screen" >
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/chooseTypeOfGameScreenFragment"
-        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.ChooseTypeOfGameScreenFragment"
+        android:name="com.alexsapps.learncountriesandflagsgame.presentation.ui.view.ChooseTypeOfGameScreenFragment"
         android:label="fragment_choose_type_of_game_screen"
         tools:layout="@layout/fragment_choose_type_of_game_screen" >
         <action
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/playCapitalsFragment"
-        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.PlayCapitalsFragment"
+        android:name="com.alexsapps.learncountriesandflagsgame.presentation.ui.view.PlayCapitalsFragment"
         android:label="fragment_play_capitals"
         tools:layout="@layout/fragment_play_capitals" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/playFlagsFragment"
-        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.PlayFlagsFragment"
+        android:name="com.alexsapps.learncountriesandflagsgame.presentation.ui.view.PlayFlagsFragment"
         android:label="fragment_play_flags"
         tools:layout="@layout/fragment_play_flags" >
         <action
@@ -69,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameOverFragment"
-        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.GameOverFragment"
+        android:name="com.alexsapps.learncountriesandflagsgame.presentation.ui.view.GameOverFragment"
         android:label="fragment_game_over"
         tools:layout="@layout/fragment_game_over" >
         <action
@@ -81,7 +81,7 @@
     </fragment>
     <fragment
         android:id="@+id/ranksFragment"
-        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.RanksFragment"
+        android:name="com.alexsapps.learncountriesandflagsgame.presentation.ui.view.RanksFragment"
         android:label="fragment_ranks"
         tools:layout="@layout/fragment_ranks" >
         <action
@@ -100,7 +100,7 @@
     </fragment>
     <fragment
         android:id="@+id/checkAllResourcesAllAvailableForTheGame"
-        android:name="com.example.learncountriesandflagsgame.presentation.ui.view.CheckAllResourcesAllAvailableForTheGame"
+        android:name="com.alexsapps.learncountriesandflagsgame.presentation.ui.view.CheckAllResourcesAllAvailableForTheGame"
         android:label="fragment_check_all_resources_all_available_for_the_game"
         tools:layout="@layout/fragment_check_all_resources_all_available_for_the_game" >
         <action

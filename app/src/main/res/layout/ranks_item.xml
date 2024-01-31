@@ -4,7 +4,7 @@
     <data>
         <variable
             name="rankItem"
-            type="com.example.learncountriesandflagsgame.data.entities.RankItem" />
+            type="com.alexsapps.learncountriesandflagsgame.data.entities.RankItem" />
     </data>
 
     <androidx.cardview.widget.CardView

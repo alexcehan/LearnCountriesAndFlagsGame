@@ -74,11 +74,7 @@ class PlayFlagsFragment : Fragment() {
 
 
                         val currentScore = viewModel.scoreOfCurrentGame.value?: 0
-                        val action = if (currentScore!=0) {
-                            PlayFlagsFragmentDirections.actionPlayFlagsFragmentToGameOverFragment("${currentScore}")
-                        } else {
-                            PlayCapitalsFragmentDirections.actionPlayCapitalsFragmentToChooseRegionScreenFragment()
-                        }
+                        val action = PlayFlagsFragmentDirections.actionPlayFlagsFragmentToGameOverFragment("${currentScore}")
 
 
 

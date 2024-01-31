@@ -81,11 +81,7 @@ class PlayCapitalsFragment : Fragment() {
 
 
                         val currentScore = viewModel.scoreOfCurrentGame.value?: 0
-                        val action = if (currentScore !=0) {
-                            PlayCapitalsFragmentDirections.actionPlayCapitalsFragmentToGameOverFragment("${currentScore}")
-                        } else {
-                            PlayCapitalsFragmentDirections.actionPlayCapitalsFragmentToChooseRegionScreenFragment()
-                        }
+                        val action = PlayCapitalsFragmentDirections.actionPlayCapitalsFragmentToGameOverFragment("${currentScore}")
                         findNavController().navigate(action)
                     }
                     }
